@@ -36,7 +36,7 @@
         </tr>
       </tbody>
     </table>
-    <form-endereco :endereco="endereco" @saveEndereco="saving" ></form-endereco>
+    <form-endereco :endereco="endereco" @saveEndereco="saving" @cancelaAdicao="cancelaAdicionarEndereco" ></form-endereco>
   </div>
 </template>
 
@@ -62,7 +62,11 @@ export default {
         bairro: "",
         cidade: "",
         uf: "",
-        tipo: ""
+        tipo: "",
+        logradouro_encontrado: false,
+        bairro_encontrado: false,
+        cidade_encontrada: false,
+        estado_encontrado: false
       },
       idToUpdate: ""
     };
@@ -115,7 +119,11 @@ export default {
         bairro: "",
         cidade: "",
         uf: "",
-        tipo: ""
+        tipo: "",
+        logradouro_encontrado: false,
+        bairro_encontrado: false,
+        cidade_encontrada: false,
+        estado_encontrado: false
       };
       this.idToUpdate = "";
     },
@@ -143,6 +151,11 @@ export default {
         .catch(err => {
           // An error occurred
         });
+    },
+    cancelaAdicionarEndereco() {
+      this.cleanForm();
+      this.idToUpdate = "";
+      this.$bvModal.hide("form-endereco");
     }
   },
   components: {

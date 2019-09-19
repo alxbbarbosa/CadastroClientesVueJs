@@ -31,7 +31,7 @@
             </div>
           </div>
           <label for="" class="col-form-label col-sm-1 text-right">CNPJ/CPF:</label>
-           <the-mask :mask="['##.###.###-##', '##.###.###/####-##']" class="form-control col-sm-2" name="cnpj_cpf"
+           <the-mask :mask="['###.###.###-##', '##.###.###/####-##']" class="form-control col-sm-2" name="cnpj_cpf"
           v-model="cliente.cnpj_cpf" v-validate="'required'" :class="{'danger-border' : errors.has('cnpj_cpf')}" />
         </div>
         <div class="form-group form-row">

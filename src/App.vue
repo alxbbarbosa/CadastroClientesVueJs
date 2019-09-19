@@ -1,12 +1,19 @@
 <template>
-  <div id="app" class="container">
-    <h3>Cadastro de clientes</h3>
-    <hr>
-    <grid-cliente></grid-cliente>
+  <div id="app" >
+    <Header></Header>
+      <div class="row">
+        <div class="container">
+        <h3>Cadastro de clientes</h3>
+        <hr>
+        <grid-cliente></grid-cliente>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Header from "./components/HeaderComponent";
+import Footer from "./components/FooterComponent";
 import GridCliente from "./components/GridClientesComponent";
 
 export default {
@@ -15,6 +22,7 @@ export default {
     return {};
   },
   components: {
+    Header,
     GridCliente
   }
 };

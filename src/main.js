@@ -16,13 +16,17 @@ Validator.localize('pt_BR', pt_BR)
 import VueTheMask from 'vue-the-mask'
 Vue.use(VueTheMask)
 
-
-
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+import VueResource from 'vue-resource'
 
+Vue.use(VueResource)
 
+import VueSidebarMenu from 'vue-sidebar-menu'
+import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
+
+Vue.use(VueSidebarMenu)
 
 new Vue({
   el: '#app',
