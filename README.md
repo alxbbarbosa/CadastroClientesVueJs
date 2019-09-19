@@ -6,7 +6,7 @@
 * Validação de dados no formulário com Vee-validate
 * Mascara utilizando the-mask de inputs para telefones, cpf, cnpj, contas bancárias
 
-![](/clientes.png)
+![](/clientes.jpg)
 
 ## Getting Started
 
